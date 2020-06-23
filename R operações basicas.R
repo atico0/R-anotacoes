@@ -1,28 +1,28 @@
-#OPERA«’ES BASICAS NO R
+#OPERA√á√ïES BASICAS NO R
 
 #matematicas
 #soma
 1+1
-#subtraÁ„o
+#subtra√ß√£o
 1-1
-#multiplicaÁ„o
+#multiplica√ß√£o
 3*3
-#divis„o
+#divis√£o
 4/2
-#exponeciaÁ„o
+#exponecia√ß√£o
 5**2
-#obs: a exponeciaÁ„o tabÈm pode ser feita com o ^
-#resto da divis„o
+#obs: a exponecia√ß√£o tab√©m pode ser feita com o "^"
+#resto da divis√£o
 5 %%2
-#parte inteira de uma divis„o
+#parte inteira de uma divis√£o
 5%/%2
-#a ordem de precedencia entre as operaÁıes eu  n sei mas o "()" ainda vem primeiro
-#os operadoes logicos s„o identicos aos do python (<,>,==,!=,<=,>=)
+#a ordem de precedencia entre as opera√ß√µes eu  n sei mas o "()" ainda vem primeiro
+#os operadoes logicos s√£o identicos aos do python (<,>,==,!=,<=,>=)
 
-#operaÁıes menos basicas
+#opera√ß√µes menos basicas
 #logaritimo
 log(2,base = 2)
-#obs por padr„o a base È "e" (ln)
+#obs por padr√£o a base √© "e" (ln)
 #fatorial
 factorial(5)
 #valor absoluto
