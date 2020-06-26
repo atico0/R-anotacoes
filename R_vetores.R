@@ -88,8 +88,12 @@ interaction(marcas1,marcas2)
 #gera todas as possiveis combinações entre os itens de kd conjunto
 
 
-
-
+#OBS: ai colocar um vetor  que mistura numeros e strings  os numeros são convertidos em strings
+# e pra converte-lo em um vetor numeros usa-se a função "as.numeric" e se houver uma
+#string q n possa ser convertida ela se tora "NA" (essa regra também vale pra matrizes e arrays)
+a[1] = 'a1'
+as.numeric(a)
+as.numeric(a[2:4]) # nesse caso oque seria "NA" não foi incluido
 
 
 
