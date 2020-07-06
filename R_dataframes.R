@@ -171,4 +171,3 @@ sd(resumo$quant_Jan) # desvio padrão
 
 
 
-
