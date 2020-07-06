@@ -4,8 +4,11 @@ a = c(2,3,4,5)
 b <- c('ad',343,'adgff','are')
 # obs:ambas formas dão o mesmo resultado e o "c" é obrigatorio
 c = scan()
-#ao executar o vetor 'c' ele começa a receber inputs do console e so para quando nos
-#inputarmos um espaço em branco. obs: "c<- scan()" també funciona
+#ao executar o vetor 'c' ele começa a receber inputs de num's do console e so para quando nos
+#inputarmos um espaço em branco. obs: "c<- scan()" também funciona
+c = scan(n=1)# Dessa forma o "c" só irá receber um valor
+c = scan(what =   integer())# Dessa forma o "c" só irá receber valores do tipo inteiro
+#OBS: A função "scan()" é longa e com muitos parâmetros
 
 #acesso
 a[1]
