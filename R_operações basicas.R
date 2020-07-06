@@ -36,7 +36,7 @@ sqrt(9)
 
 
 #OBS: Vale por ultimo ressaltar que todos os números usados nesses exemplos não são inteiros para o R
-class(4)# Função que diz o tipo de um dado
+class(4)
 #Para ele ser considerado um inteiro (ou integer) pode-se usar a função "as.integer()" 
 inteiro = as.integer(9)
 class(inteiro)
