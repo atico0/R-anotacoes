@@ -2,6 +2,12 @@
 
 #FUNÇÕES usadas para conhecer e mudar os tipo de dadors
 class(4)# diz o tipo do dado passado como parâmetro
+is.integer(4)# diz se o parâmetro passado é do tipo após o "is." e retorna um valor logico
+#OBS: é possivel usar funcções parecidas para se os parâmetro são iguais a dados de diversos tipos
+is.array()
+is.null()
+is.character()
+
 as.character(44)# converte o tipo de dado do parâmetro passado para o tipo que está escrito após o "as."
 #OBS: é possivel fazer conversões para todos os tipos de dados com as funções "as."
 as.null()
