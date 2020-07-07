@@ -13,6 +13,8 @@ as.character(44)# converte o tipo de dado do parâmetro passado para o tipo que e
 as.null()
 as.logical()
 as.numeric('a')# strings não podem ser convertidas para numeros
+as.integer(4.9)# na convesão de numeric para integer ele simplismente tira a parte após o ponto
+#ao invés de arredondar
 as.data.frame.integer()
 
 ##NÚMEROS
