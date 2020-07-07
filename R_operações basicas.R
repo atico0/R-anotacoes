@@ -39,7 +39,7 @@ sqrt(9)
 class(4)
 #Para ele ser considerado um inteiro (ou integer) pode-se usar a função "as.integer()" 
 inteiro = as.integer(9)
-class(inteiro)
+class(inteiro)# Função que diz o tipo de um dado
 #ou colocar um "L" após o número (precisa ser maiusculo)
 inteiro = 9L
 class(inteiro)
