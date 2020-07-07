@@ -37,7 +37,14 @@ T
 F
 class(T)
 class(FALSE)
-#Valores logicos podem ser convertidos para números e vice-versa sendo que:
+# Valores logicos podem  ser convertidos para números e vice-versa sendo que:
+as.character(TRUE)
+as.logical('true')
+# na conversão character para logical a palavra não precisa estar em letras maisculas 
+#mas precisa estar escrita corretamente
+as.logical('f')# retorna o valor "NA"
+
+#Valores logicos podem também ser convertidos para números e vice-versa sendo que:
 as.logical(1)
 as.logical(2)
 as.logical(0)
