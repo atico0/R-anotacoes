@@ -1,5 +1,14 @@
 #Principais tipos do R
 
+#FUNÇÕES usadas para conhecer e mudar os tipo de dadors
+class(4)# diz o tipo do dado passado como parâmetro
+as.character(44)# converte o tipo de dado do parâmetro passado para o tipo que está escrito após o "as."
+#OBS: é possivel fazer conversões para todos os tipos de dados com as funções "as."
+as.null()
+as.logical()
+as.numeric()
+as.data.frame.integer()
+
 ##NÚMEROS
 #inteiro - integer
 5L
@@ -34,6 +43,5 @@ as.integer(F)
 # já na conversão boleano/numerico TRUE torna-se 1 e FALSE torna-se 0
 #OBS: é possivel fazer até operações com TRUE e FALSE mesmo sem convertelos
 F*2
-(T + T -(2*F) +9*T)-T/2
-
+(T + T -(2*F) +9*T-T)/2
 
