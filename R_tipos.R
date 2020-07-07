@@ -12,7 +12,7 @@ as.character(44)# converte o tipo de dado do parâmetro passado para o tipo que e
 #OBS: é possivel fazer conversões para todos os tipos de dados com as funções "as."
 as.null()
 as.logical()
-as.numeric()
+as.numeric('a')# strings não podem ser convertidas para numeros
 as.data.frame.integer()
 
 ##NÚMEROS
