@@ -119,6 +119,6 @@ num[c(T,F)]# mostra elemento sim e elemento não
 num[c(F,F,T)]# mostra só o 3 elemento
 
 
-
+c(1,T)
 
 
