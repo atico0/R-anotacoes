@@ -1,6 +1,6 @@
 #VETORES
 #criação
-a = c(2,3,4,5)
+a = c(2,3,4,5,66,-1)
 b <- c('ad',343,'adgff','are')
 # obs:ambas formas dão o mesmo resultado e o "c" é obrigatorio
 c = scan()
@@ -20,6 +20,16 @@ b[2:4]
 #mas é possivel pedir pra um conjunto de indices q n estão em sequencia usando um vetor
 a[c(1,2,4)]
 
+#NOMEANDO
+#nomear vetores é igual a nomear variaveis simples
+vetor = 1:3
+vetor
+names(vetor) = c('e1','e2','e3')
+vetor
+#OBS: também é possivel acessar os elementos de um vetor pelo seu nome
+vetor['e2']
+
+
 #modificar
 a[1] = 99
 b[2] <- 'kkkkkkku'
@@ -29,7 +39,7 @@ b[2] <- 'kkkkkkku'
 a[2:4] <- c(9,8,7)
 b[c(4,3,2)] = c('a','b','c')
 #também  é possivel fazer isso se o conjunto q vai alterado ser for 
-#um mutiplo do conjuto q vai alterar
+#um mutiplo do conjuto q vai alterar(o conjunto menor precisa ser multiplo do maio)
 #nesse caso assim q o conjunto menor terminar ele recomeça e isso vai acontecer n vezes
 # sendo n= tamanho do conjuto a ser mudado/tamanho do conjuto q vai mudar
 #por isso a necessicade dele ser mutiplo
@@ -52,7 +62,7 @@ a[c(4,5,6)] = c(1,2,3)# como isso está em seq usar o "4:6" tbm serve
 b[c(6)] = 'antes existe NA' # dnv usar ou n o "c()" n faz diferença ai
 
 
-#operações
+#OPERAÇÕES
 length(a)
 #retorna o tamanho do vetor
 sort(b)
@@ -66,8 +76,9 @@ k = a*2
 l = b == 'antes existe NA'
 #realizar uma operação entre um vetor e uma constante retorna um vetor com kda elemento
 #submetido aquela operação
-#obs lembrar da regra usada com a modificao de vetores quando o vetor modificador é mutiplo
-
+#OBS:lembrar da regra usada com a modificão de vetores quando o vetor modificador é mutiplo
+#pois ela também é valida nas operações entre vetores
+a*c(1,2,3,0) 
 
 #UNIÃO
 marcas1 = c('nike','adi','olimpikus','adi')
@@ -90,16 +101,22 @@ setdiff(marcas2,marcas1)
 interaction(marcas1,marcas2)
 #gera todas as possiveis combinações entre os itens de kd conjunto
 
+##VALE RESSALTAR QUE:
 
+#O R considera todos os tipos de dados como vetores
+is.vector(1)
+is.vector(T)
+#por isso que o ouput do terminal sempre mostra o indice dos elementos mesmo em numeros ou strings
+num = 99
+num[2]# por isso é também possivel fazer buscas por indices em elementos simples
+num[2:4]=1 #isso também facilita a conversão de um elemento em um vetor 
+num#(pq tecnicamente ele já é um vetor)
 
+#é possivel também selecionar os vetores por valores boleanos
 
-
-
-
-
-
-
-
+num[T]# mostra todos os elementos
+num[c(T,F)]# mostra elemento sim e elemento não
+num[c(F,F,T)]# mostra só o 3 elemento
 
 
 

@@ -17,3 +17,11 @@ rm(v1)
 #também é possivel combinar funções para apagar todas as variaveis 
 variaveis = ls()
 rm(variaveis)
+
+#NOMEANDO
+#é possivel nomear variaveis de qualquer tipo no R usando a função "name(VAR)"
+b = 1 
+names(b) = 'adad'
+b
+#sendo que em variaveis de 1 dimensão o nome é dado aos elementos
+
