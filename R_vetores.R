@@ -118,7 +118,8 @@ num[T]# mostra todos os elementos
 num[c(T,F)]# mostra elemento sim e elemento não
 num[c(F,F,T)]# mostra só o 3 elemento
 
-
-c(1,T)
+#Os vetores no R só podem conter um tipo de dado
+c(1,T)#nesse caso o "T" vai ser convertido pra numeros
+c(1,T,'1')#nesse caso o "T" vai ser convertido pra string junto com o "1"
 
 

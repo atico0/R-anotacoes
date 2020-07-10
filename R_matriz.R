@@ -24,6 +24,7 @@ matrix(1:10,nrow =5, ncol = 4,T, dimnames = list(c('linha1','linha2','linha3','l
 #arg5 = uma lista com 2 args q determinam os nomes das listas e colunas
 #arglista1 = nome das linhas da matriz. arglista2 = nome das colunas da matriz
 
+matrix(1:100)# Cria uma matriz de  100 linhas e 1 coluna
 
 #ACESSANDO
 
