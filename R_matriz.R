@@ -9,6 +9,7 @@ vendas <- cbind(produtos,quantidades)
 vendas2 = rbind(produtos,quantidades)
 vendas
 vendas2
+
 #no "cbind" as variaveis dão nome nome as colunas 
 #e no "rbind" as variaveis dão nome as linhas
 
@@ -45,7 +46,8 @@ vendas[1:3,1:2]
 #Acessa todos os elementos da 1 até 3 linha das colunas 1 até a 
 #(nesse caso isso foram tds os elementos mas so pq a matriz é pequena)
 
-#MODIFICANDO
+##MODIFICANDO
+#Reatribuido valores
 vendas_jan = vendas
 vendas_jan[1,] = c('linha1',1)
 vendas_jan
@@ -53,6 +55,7 @@ vendas_jan
 #OBS: o valores ints e floats se tornam str's ao sairem de uma matrix então para usa-los
 #é necessario usar o as.numeric()
 as.numeric(vendas[,2])
+#Removendo valores
 #Para retirar valores é necessario colocar um "-" antes do numero da sequencia ou vetor
 vendas[,-2]
 #exclui segunda coluna
@@ -60,18 +63,36 @@ vendas[-1,]
 #exclui 1 linha
 vendas[-1,-2]
 #Exclui ao mesmo tempo a linha 1 e a coluna 2
+vendas[c(-1,-3),]
+#remove as linhas 1 e 3
+vendas[-c(1,3),] # maneira alternativa de fazer a operação acima
 #OBS: pra essas mudanças perdurarem é necessario reatribuir a matrix como ela mesma modificada
 #é possivel fazer coisas mais complexas com a exclusão mas eu n to entendendo como ainda
 
+#Adicionando colunas
+#para aatribuir uma nova coluna deve-se criar uma nova matriz usando o "cbind()"
+#contendo a matriz contendo a matriz  original e o vetor a ser usado como nova coluna
+preco_em_k = c(1.5,2.7,3,0.9)
+vendas_c_preco = cbind(vendas,preco_em_k)
+#Os tamanho do vetor da nova coluna deve ser multiplo do numero de linhas da matriz
+preco2_em_k = c(1.5,2.7)
+cbind(vendas,preco2_em_k)
 
+#adicionado linhas
+#para aatribuir uma nova linha deve-se criar uma nova matriz usando o "rbind()" 
+#contendo a matriz contendo a matriz  original e o vetor a ser usado como nova linha
+vendas_c_preco = rbind(vendas_c_preco,c("xbox",4,9))
+#isso também funciona pra adicionar varias linhas
+consoles = cbind(c('playstation','pc'),c(100,32),c(1,2))
+vendas_c_preco = rbind(vendas_c_preco,consoles)
 
-
-#OPERAÇÕES
+##OPERAÇÕES
 marcos<-c(20,334,420,130)
 maria<-c(22,28,19,10)
 carlos<-c(120,130,400,230)
 vendas_Reais <- cbind(carlos,marcos,maria)
 matrix1 = matrix(1,3,6)
+generica = matrix(1:9,3,3)
 
 
 dim(vendas_Reais)
@@ -97,7 +118,8 @@ matrix1+vendas_Reais# As matrizes precisam ter mesma dimensão
 vendas_Reais%*%matrix1
 #como em produto matricial a ordem importa esse é o unico produto matricial possivel entre
 #essas matrizes
-
+rowSums(generica)# retorna um vetor com as somas dos elementos de cada linha
+colSums(generica)# retorna um vetor com as somas dos elementos de cada coluna
   
 
 

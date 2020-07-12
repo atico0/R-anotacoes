@@ -103,7 +103,7 @@ interaction(marcas1,marcas2)
 
 ##VALE RESSALTAR QUE:
 
-#O R considera todos os tipos de dados como vetores
+#O R considera todos os tipos de dados não compostos como vetores
 is.vector(1)
 is.vector(T)
 #por isso que o ouput do terminal sempre mostra o indice dos elementos mesmo em numeros ou strings
