@@ -1,17 +1,25 @@
-# Fatores são vetores usados em  variaveis qualitativas e uma vez definidas quais são não podem ser adicionados
-# outros tipos de variaveis
+# Fatores são vetores usados em  variaveis qualitativas e uma vez definidas quais são 
+#não podem ser adicionados  outros tipos de variaveis
 
 #Criação
 #usando vetores
-fator2 = c(1,2,3,1,1,2,2,2,2,4,4)
+fator = as.factor(c('A','B','C','B'))
 fator
+fator2 = c(1,2,3,1,1,2,2,2,2,4,4)
 fator2 = as.factor(fator2)
 fatorn = as.factor(c(1,1,3,3,1,2,2,2,2,2))
 #Usando funçoes
 fator = factor(c('1','2','3','1','1','2','2','2','2'))# esse fator uma vez definido so vai aceitar valores '1' '2' e '3'
 fator[1] = '99'
+fator[1] = '2'
+fator = factor(c('A','A','B','B','B','B','C','C','C','B'),ordered = TRUE)
+fator[1]>fator[2] 
+# o arg ordered faz com que o level com mais elementos seja considerado superior dos demais
 #OBS: como os elementos de um fator não são usados para calculos mesmo os numeros podem ser usados em
 #forma de string
+str(fator)# usando isso é possivel saber qual a ordem dos leveis pelo respectivo numero após o ":"
+#"A" é o primeiro level "B" o segundo e "C" o terceiro
+summary(fator) # diz quantos elementos de cada level existem
 
 #Acessando
 fator[1]
