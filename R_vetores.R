@@ -101,9 +101,9 @@ setdiff(marcas2,marcas1)
 interaction(marcas1,marcas2)
 #gera todas as possiveis combinações entre os itens de kd conjunto
 
-##VALE RESSALTAR QUE:
+###VALE RESSALTAR QUE:
 
-#O R considera todos os tipos de dados não compostos como vetores
+##O R considera todos os tipos de dados não compostos como vetores
 is.vector(1)
 is.vector(T)
 #por isso que o ouput do terminal sempre mostra o indice dos elementos mesmo em numeros ou strings
@@ -112,14 +112,17 @@ num[2]# por isso é também possivel fazer buscas por indices em elementos simples
 num[2:4]=1 #isso também facilita a conversão de um elemento em um vetor 
 num#(pq tecnicamente ele já é um vetor)
 
-#é possivel também selecionar os vetores por valores boleanos
+##é possivel também selecionar os vetores por valores boleanos
 
 num[T]# mostra todos os elementos
 num[c(T,F)]# mostra elemento sim e elemento não
 num[c(F,F,T)]# mostra só o 3 elemento
 
-#Os vetores no R só podem conter um tipo de dado
+##Os vetores no R só podem conter um tipo de dado
 c(1,T)#nesse caso o "T" vai ser convertido pra numeros
 c(1,T,'1')#nesse caso o "T" vai ser convertido pra string junto com o "1"
 
 
+##Existe uma função chamada "subset" que pega subconjunto de vetores matrizes ou dataframaes
+subset(a,a!=66)# retorna todos os elementos de "a" diferentes de 66
+subset(a,a>0 & a<66)# retorna todos os elementos de "a" maiores que 0 e menores que 66

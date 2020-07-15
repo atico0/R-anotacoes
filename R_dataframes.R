@@ -138,19 +138,28 @@ resumo <- resumo[,-2] #retira coluna 2
 
 resumo <-resumo[-(c(1,4)),] # retira as linhas 1 e 4
 
+
+
+
+
+
 #para adicionar uma nova linhas é necessario criar uma matriz  com as linhas que se deseja adicionar
 linha1 = c('Z',999,223,123)
 linha2 = c('K',99,23,13)
-novas_linhas =  matrix(c(linha1,linha2),nrow = 2,byrow = T)
+novas_linhas =  matrix(c(linha1,linha2),ncol = 4,byrow = T)
+names(novas_linhas) = names(resumo)
+nova_matriz = rbind(resumo,novas_linhas)
 # (AS LINHAS PRECISAM TER OS MESMOS NOMES DO DATAFRAME)
 nomes = c('fornecedores', 'quant_Jan', 'quant_Fev', 'quant_Mar')
-names(resumo) = nomes
-novas_linhas =  matrix(c(linha1,linha2),nrow = 2,ncol = 4,byrow = T,
-                       dimnames = as.list(c('linha1','linha2'), 
-                                          c('fornecedores', 'quant_Jan', 'quant_Fev', 'quant_Mar')))
+names(novas_linhas) = nomes
 #criar uma segunda matriz (usando o rbind())
 #comoposta pela
 ?matrix()
+####ESSA PARTE ACIMA AINDA ESTÁ DANDO ERRO ENTÃO
+
+
+
+
 
 ### OPERAÇÕES
 ncol(resumo)
@@ -180,8 +189,8 @@ mean(resumo$quant_Jan) # media
 median(resumo$quant_Jan) # mediana
 sd(resumo$quant_Jan) # desvio padrão
 
-##Vale ressaltar que:
-#É possivel ordenar o dataframe por uma coluna especifica
+##V#ale ressaltar que:
+##É possivel ordenar o dataframe por uma coluna especifica
 
 fornecedores<-c("X","E","B","A","D")
 quant_Jan<-c(320,230,100,340,10)
@@ -196,16 +205,16 @@ resumo_df<-as.data.frame(resumo)
 resumo_df
 str(resumo_df) 
 
-order(resumo_df$fornecedores)# retorna um vetor com os indices da coluna fornecedores da forma que os
-#elementos dos seus respectivos itens 
-#ficariam se o dataframe fosse ordenado em função da coluna fornecedores
+order(resumo_df$fornecedores)# retorna um vetor com os indices dos elementos da coluna fornecedores 
+#da forma que os elementos dos seus respectivos indices ficariam se o dataframe fosse ordenado
+#em função da coluna fornecedores
 
 resumo[order(resumo_df$fornecedores),]# Ordena o resumo em função da coluna fornecedores 
 #(NÃO afeta o dataframe original)
 
 resumo[order(resumo_df$fornecedores, decreasing = T),]# Ordena o resumo em função da coluna fornecedores 
-#(NÃO afeta o dataframe original) mas na em ordem decrescente 
+#(NÃO afeta o dataframe original) mas em ordem decrescente 
 
 
-
+subset()
 
