@@ -93,8 +93,9 @@ xingamento(xinga = 'gordo',nome = 'edmilson')
 
 
 ##Recriando as funções de tamanho sooma media variancia e desvio padrão
-#(length,sum,mean,var,sd) sem usar funções já previamente construidas
+##(length,sum,mean,var,sd) sem usar funções já previamente construidas
 
+#recriando função length
 tamanho <- function(vet) {
   cont = 0
   for (i in vet){
@@ -105,7 +106,7 @@ tamanho <- function(vet) {
 length(1:10)
 tamanho(1:10)
 
-
+#recriando função sum
 soma <- function(vet) {
   cont = 0
   for (i in vet)  {
@@ -116,6 +117,7 @@ soma <- function(vet) {
 sum(1:10)
 soma(1:10)
 
+#recriando função mean
 media <- function(vet) {
   return(soma(vet)/tamanho(vet))  
 }
@@ -123,7 +125,7 @@ mean(1:10)
 media(1:10)
 
 
-
+#recriando função var
 variancia <- function(vet) {
   v_media = media(vet)
   v_tamanho = tamanho(vet)
@@ -136,7 +138,7 @@ variancia <- function(vet) {
 var(1:10)
 variancia(1:10)
 
-
+#recriando função sd
 desvio = function(vet){
   return (sqrt(variancia(vet)))
 }
@@ -160,6 +162,8 @@ for (i in 1:20){
 
 
 
+
+####
 
 print = function(){
   cat('novo print')
