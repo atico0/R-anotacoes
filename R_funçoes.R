@@ -162,15 +162,15 @@ for (i in 1:20){
 
 
 
+###VALE RESSALTAR QUE
 
-####
-
+#é possivel atribuir a funções já definidas novos valores e até outras funções
+print = 1
 print = function(){
   cat('novo print')
 }
-
 print()
-
+#boa sorte pra fazer o print voltar ao normal
 
 print()
 paste()
