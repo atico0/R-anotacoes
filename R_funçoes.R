@@ -160,9 +160,15 @@ for (i in 1:20){
 
 
 
+###usando o breakpoint
 
+for (c in 1:10){
+  print(c**2)
+}
 
 ###VALE RESSALTAR QUE
+
+
 
 #é possivel atribuir a funções já definidas novos valores e até outras funções
 print = 1
