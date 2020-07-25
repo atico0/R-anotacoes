@@ -1,21 +1,27 @@
 alunos = function(alunos_dataframe,linha){
-  vetor = as.vector(c(10000))
-  cat('Digite seu nome: ')
-  nome = resposta <- readline(prompt = '')
-  cat('Digite seu sexo: ')
-  sexo <- readline(prompt = "")
-  for (c in 1:3){
-    cat( "Digite sua ",c, ' nota')
-    nota = resposta <- readline(prompt =   '')
-    vetor = as.vector(c(vetor,nota))
+  linha_somada = linha
+  resp = ''
+  while (resp != 'n') {
+    alunos_dataframe[linha_somada,1] = resposta <- readline(prompt = 'digite seu nome:')
+    alunos_dataframe[linha_somada,2] <- readline(prompt = "Digite seu sexo: ")
+    for (c in 1:3){
+      cat( "Digite sua ",c, ' nota')
+      alunos_dataframe[linha_somada,2+c] = as.numeric(resposta <- readline(prompt =  ""))
+    }
+    alunos_dataframe[linha_somada,6] = round(mean(c(alunos_dataframe[linha_somada,3],
+                                     alunos_dataframe[linha_somada,4],alunos_dataframe[linha_somada,5])),2)
+    alunos_dataframe[linha_somada,7] = alunos_dataframe[linha,6]>=7
+    
+    cat('A média do aluno foi: ',alunos_dataframe[linha_somada,6])
+    print('')
+    if(alunos_dataframe[linha_somada,7]){
+      print('ALUNO APROVADO')
+    }else{
+      print('ALUNO REPROVAOD')
+    }
+    linha_somada = linha_somada+1
+    resp =  readline(prompt = 'Quer continuar? [S/N]')
   }
-  vetor = vetor[-1]
-  vetor = as.numeric(vetor)
-  media = mean(vetor)
-  vetor = c(nome,sexo,vetor,round(media,2),media>=7)
-  matriz = rbind(vetor)
-  names(matriz) = c('NOME','SEXO','NOTA1','NOTA2','NOTA3','MEDIA','APROVADO')
-  alunos_dataframe[linha,] = matriz
   return(alunos_dataframe)
 }
 
@@ -27,14 +33,17 @@ relacao = data.frame(matrix(NA,ncol = 7))
 names(relacao) = c('NOME','SEXO','NOTA1','NOTA2','NOTA3','MEDIA','APROVADO')
 relacao[,c(3,4,5)] = as.numeric(relacao[,c(3,4,5)])
 
-relacao = alunos(relacao,2)
+relacao = alunos(relacao,4)
+str(relacao)
 
 
-
-asdasdasd
+relacao[3,] = 'a'
 
 
 
 c(1:10,'oi')
+
+
+
 
 
