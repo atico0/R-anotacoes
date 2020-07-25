@@ -67,15 +67,14 @@ resumo_df$fornecedores[3] # acessando elemento linha 3 da coluna $fornecedores
 resumo_df[3,1] # acessa elemento da linha 3 da coluna 1 (mesmo resultado do acesso acima)
 
 
-
 #####  MODIFICANDO
 ## Modificando tipos de daodos das colunas
-fornecedores<-c("A","B","E","D","X")
-quant_Jan<-c(320,230,100,340,10)
-quant_Fev<-c(220,630,60,50,60)
-quant_Mar<-c(520,430,100,34,10)
-
-resumo<-data.frame(fornecedores,quant_Jan,quant_Fev,quant_Mar)  
+  fornecedores<-c("A","B","E","D","X")
+  quant_Jan<-c(320,230,100,340,10)
+  quant_Fev<-c(220,630,60,50,60)
+  quant_Mar<-c(520,430,100,34,10)
+  
+  resumo<-data.frame(fornecedores,quant_Jan,quant_Fev,quant_Mar)  
 #Adicionei uma forma mais direta de criação de um dataframe
 
 str(resumo)  #tipos corretos das variáveis
@@ -102,41 +101,46 @@ str(resumo_1)
 
 ## Modificando o DataFrame
 
-resumo[5,2] = 0
+resumo_df[5,2] = 0
 
-resumo[5,c(2,3)] = -1
+resumo_df[5,c(2,3)] = -1
 
-resumo[c(5,4),c(2,3)] = -1
+resumo_df[c(5,4),c(2,3)] = -1
 
-resumo$quant_Jan[5]<-100
+resumo_df$quant_Jan[5]<-100
 
-resumo$quant_Fev[2:4]<-c(640,75,60)
+resumo_df$quant_Fev[2:4]<-c(640,75,60)
 
-resumo$quant_Mar[c(1,4)]<-c(130,400)
+resumo_df$quant_Mar[c(1,4)]<-c(130,400)
 
-resumo$fornecedores<-c("Camil","Zaeli","Tio João","Danone","Liza")
+resumo_df$fornecedores<-c("Camil","Zaeli","Tio João","Danone","Liza")
 
-resumo[5,] <-c("Friboi",0,0,55,-3) 
+resumo_df[5,] <-c("Friboi",0,0,55,-3) 
 
-resumo[2,] <-c("Fuckboy",-2,4,556,-3) 
+resumo_df[2,] <-c("Fuckboy",-2,4,556,-3) 
 
 # Eu acho essa parte não precisa de explicação
 
 # Adicionar variáveis ao Dataframe
 
-resumo$quant_Abril <- c(230,250,140,320,110,99)
+resumo_df$quant_Abril <- c(230,250,140,320,110,99)
 
 # Remover variáveis do Dataframe
 
-resumo <- resumo[,-5] #remove 5 coluna
+resumo_df <- resumo_df[,-5] #remove 5 coluna
 
 # Adicionando e removendo casos
 
-resumo <- resumo[-6,] # retira linha 6
+resumo_df <- resumo_df[-6,] # retira linha 6
 
-resumo <- resumo[,-2] #retira coluna 2
+resumo_df <- resumo_df[,-2] #retira coluna 2
 
-resumo <-resumo[-(c(1,4)),] # retira as linhas 1 e 4
+resumo_df <-resumo_df[-(c(1,4)),] # retira as linhas 1 e 4
+
+
+#adiciona linhas ao DATAFRAME
+resumo_df[6,] <- c('F',-10,9999,2)
+
 
 
 
@@ -155,7 +159,12 @@ names(novas_linhas) = nomes
 #criar uma segunda matriz (usando o rbind())
 #comoposta pela
 ?matrix()
-####ESSA PARTE ACIMA AINDA ESTÁ DANDO ERRO ENTÃO
+####PARTE ACIMA AINDA ESTÁ DANDO ERRO ENTÃO
+
+
+
+
+
 
 
 

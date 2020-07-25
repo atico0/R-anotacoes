@@ -12,6 +12,7 @@
 #exponeciação
 5**2
 #obs: a exponeciação tabém pode ser feita com o ^
+
 #resto da divisão
 5 %%2
 #parte inteira de uma divisão
@@ -31,11 +32,13 @@ abs(-55)
 sin(pi)
 cos(pi)
 tan(pi)
-#raiz quad
+#raiz quadrada
 sqrt(9)
+#diminuição das casas decimais de um número
+round(1.34,1)
 
-
-#OBS: Vale por ultimo ressaltar que todos os números usados nesses exemplos não são inteiros para o R
+#OBS: Vale por ultimo ressaltar que todos os números
+#usados nesses exemplos não são inteiros para o R
 class(4)
 #Para ele ser considerado um inteiro (ou integer) pode-se usar a função "as.integer()" 
 inteiro = as.integer(9)
